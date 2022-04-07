@@ -1,0 +1,32 @@
+1_01class
+    用户自定义的数据类型（user_defined data type）,增强类型抽象化的层次
+    class的定义分为两个部分
+    （1）头文件（header file）——用来声明该class的各种操作行为
+    （2）代码文件（program text)——包含了操作行为的具体实现
+1_02对象初始化方式
+（1）使用=运算符
+    e.g.: int num_tries = 0;
+（2） 构造函数语法
+    e.g. int num_tries(0);
+    可以解决对象多值初始化问题
+    使内置类型与class类型的初始化方式得到统一
+1_03Array和Vector
+（1）包含vector头文件
+（2）vector<data_type>
+（3）vector不支持数组那样使用初始化列表的方式进行初始化
+    数组：
+        int elem_vals[seq_size] = {
+            1,2,3
+            4,5,6
+        }
+    容器：//以elem_vals的值来初始化elem_seq
+        vector<int> ele_seq(elem_vals,elem_vals+seq_size);//括号内为内存地址
+1_04文件读写
+（1）包含头文件 fstream
+（2）若写文件，则创建ofstream对象
+    ofstream outfile("filename.txt",ios_base::app); //以添加方式写文件
+（3）若读文件，则创建ifstream对象
+    ifstream infile("filename.txt")
+
+    
+    
